@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad | Portfolio 2026</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- نفس إعدادات التصميم السابقة تماماً --- */
+        :root {
+            --primary-bg: #0f172a;    
+            --accent-blue: #38bdf8;   
+            --card-bg: #1e293b;       
+            --text-main: #f1f5f9;     
+            --text-dim: #94a3b8;      
+            --white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* شريط التنقل مع الروابط الجديدة */
+        header {
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* القسم الرئيسي - Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: var(--text-dim);
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        /* الأزرار المحدثة بروابط الصفحات */
+        .btn {
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            display: inline-block;
+            margin: 10px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: var(--primary-bg);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--accent-blue);
+            transform: translateY(-5px);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* قسم المشاريع بنفس التصميم */
+        .section {
+            padding: 120px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 70px;
+            color: var(--white);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.8rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">MUHAMMAD</a>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="contact.html">تواصل معي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>أنا محمد</h1>
+            <p>مطور برمجيات مهتم ببناء تجارب رقمية ذكية وحلول تقنية مبتكرة. أهلاً بك في معرض أعمالي.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">عرض أعمالي</a>
+                <a href="contact.html" class="btn btn-outline">تواصل الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="projects">
+        <h2 class="section-title">المشاريع <span>المختارة</span></h2>
+        <div class="grid">
+            <article class="card">
+                <span style="font-size: 2.5rem; margin-bottom: 20px; display: block;">💻</span>
+                <h3>تطوير الأنظمة</h3>
+                <p>بناء تطبيقات متكاملة تركز على الأداء العالي وتجربة المستخدم السلسة.</p>
+            </article>
+            <article class="card">
+                <span style="font-size: 2.5rem; margin-bottom: 20px; display: block;">🛡️</span>
+                <h3>أمن المعلومات</h3>
+                <p>تحليل الأنظمة وتأمين واجهات البرمجة لضمان حماية البيانات من الثغرات.</p>
+            </article>
+            <article class="card">
+                <span style="font-size: 2.5rem; margin-bottom: 20px; display: block;">⚡</span>
+                <h3>حلول الويب</h3>
+                <p>تصميم واجهات ويب تفاعلية وسريعة تتوافق مع جميع الشاشات العالمية.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>صُنع بكل حماس بواسطة <strong>محمد</strong> &copy; 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

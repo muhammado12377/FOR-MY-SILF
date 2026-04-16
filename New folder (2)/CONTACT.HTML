@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معي | Muhammad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* إعدادات الألوان - متوافقة مع الموقع الرئيسي */
+        :root {
+            --bg-deep: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* العنوان الرئيسي للصفحة */
+        .contact-header {
+            text-align: center;
+            padding: 100px 0 50px;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .contact-header p {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        /* تخطيط الصفحة (Layout) */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            padding-bottom: 100px;
+        }
+
+        /* صندوق معلومات التواصل */
+        .contact-info {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+            height: fit-content;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .info-text h4 {
+            font-size: 1rem;
+            color: var(--text-dim);
+        }
+
+        .info-text p {
+            font-weight: 700;
+        }
+
+        /* نموذج المراسلة (Contact Form) */
+        .contact-form {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: white;
+            font-family: 'Cairo';
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: var(--bg-deep);
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+        }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .contact-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="contact-header">
+            <h1>لنتحدث سوياً</h1>
+            <p>لديك فكرة مشروع أو استفسار تقني؟ أنا هنا للمساعدة.</p>
+        </header>
+
+        <div class="contact-wrapper">
+            <aside class="contact-info">
+                <div class="info-item">
+                    <div class="icon-circle">📧</div>
+                    <div class="info-text">
+                        <h4>البريد الإلكتروني</h4>
+                        <p>muhammad@example.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle">📍</div>
+                    <div class="info-text">
+                        <h4>الموقع</h4>
+                        <p>عن بُعد / عالمي</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon-circle">🔗</div>
+                    <div class="info-text">
+                        <h4>لينكد إن</h4>
+                        <p>linkedin.com/in/muhammad</p>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="contact-form">
+                <form action="#">
+                    <div class="form-group">
+                        <label>الاسم بالكامل</label>
+                        <input type="text" class="form-control" placeholder="أدخل اسمك هنا...">
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" class="form-control" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>الموضوع</label>
+                        <input type="text" class="form-control" placeholder="عنوان الرسالة">
+                    </div>
+                    <div class="form-group">
+                        <label>الرسالة</label>
+                        <textarea class="form-control" rows="5" placeholder="كيف يمكنني مساعدتك؟"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">إرسال الرسالة الآن</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
